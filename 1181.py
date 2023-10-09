@@ -1,34 +1,20 @@
-# exercicio adaptado
-
-import random
-
-while True:
-    linha = int(input("num linha "))
-    if 0 <= linha <= 11:
-        break
-
-ordem = int(input("ordem matriz "))
-
-t = input("soma ou media (S/M) ").upper()
-
 matriz = []
+for i in range(12):
+    matriz.append([0]*12)
 
-for i in range(ordem):
-    linhaN = []
-    for j in range(ordem):
-        linhaN.append(random.randint(0,20))
-    matriz.append(linhaN)
+linha = int(input())
+operacao = input()
 
-soma = 0
+for i in range(12):
+    for j in range(12):
+        matriz[i][j] = float(input())
 
-print(matriz)
+resultado = 0
 
-for i in range(ordem):
-    soma += matriz[linha][i]
+for coluna in range(12):
+    resultado += matriz[linha][coluna]
 
-if t == "S":
-    print(f'a soma é {soma}')
-elif t == "M":
-    print(f'a media é {(soma/ordem):.1f}')
+if operacao == "M":
+    resultado /= 12
 
-print(matriz[linha])
+print(f"{resultado:.1f}")

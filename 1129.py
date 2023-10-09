@@ -1,22 +1,21 @@
-x = ("A","B","C","D","E")
-
 while True:
-    while True:
-        numQuestoes = int(input())
-        if 0 <= numQuestoes <= 255:
-            break
-
-    if numQuestoes == 0:
+    num_questoes = int(input())
+    if num_questoes == 0:
         break
 
-    for i in range(numQuestoes):
-        respostas = input().split(" ")
-        preto = 0
-        for j in range(5):
-            if int(respostas[j]) <= 127:
-                preto += 1
-                respostaMarcada = j
-        if preto == 1:
-            print(x[respostaMarcada])
+    for i in range(num_questoes):
+        resposta = input().split()
+        resposta = list(map(int, resposta))
+
+        cont_alternativas = 0
+        resposta_correta = ''
+
+        for questao in resposta:
+            if questao <= 127:
+                cont_alternativas += 1
+                resposta_correta = chr(resposta.index(questao) + 65)
+
+        if cont_alternativas == 1:
+            print(resposta_correta)
         else:
-            print("*")
+            print('*')

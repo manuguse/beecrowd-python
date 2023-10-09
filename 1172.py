@@ -1,7 +1,10 @@
-x = []
+vector = []
 
-for i in range(11):
-    x.append(int(input('')))
-    if x[i] <= 0:
-        x[i] = 1
-    print(f'X[{i}] = {x[i]}')
+for i in range(10):
+    num = int(input())
+    if num <= 0:
+        num = 1
+    vector.append(num)
+
+for i in range(10):
+    print(f"X[{i}] = {vector[i]}")

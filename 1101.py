@@ -1,24 +1,20 @@
-# exercício 1101
-
 while True:
+
+    num1, num2 = map(int, input().split())
+
+    if num1 <= 0 or num2 <= 0:
+        break
+
     soma = 0
-    M = int(input('valor de M '))
-    N = int(input('valor de N '))
 
-    if N <= 0:
-        break
-    elif N <= 0:
-        break
+    if num1 > num2:
+        for i in range(num2, num1 + 1):
+            print(i, end=' ')
+            soma += i
+
+    else:
+        for i in range(num1, num2 + 1):
+            print(i, end=' ')
+            soma += i
     
-    elif N < M:
-        inicial = N
-        final = M + 1
-    elif M < N:
-        inicial = M
-        final = N + 1
-
-    for i in range (inicial,final):
-        soma += i
-        print(i, end=' ')
-
-    print(f'soma = {soma}')
+    print(f'Sum={soma}')

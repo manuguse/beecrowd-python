@@ -1,22 +1,10 @@
-# exercício 1046
+inicial, final = map(int, input().split())
 
-x = int(input('horário inicio '))
-while (x>24) or (x<0):
-    print('valor inválido')
-    x = int(input('inicio '))
+if inicial == final:
+    print('O JOGO DUROU 24 HORA(S)')
 
-y = int(input('horário fim '))
-while (y>24) or (y<0):
-    print('valor inválido')
-    y = int(input('horário fim '))
-    
-if (y > x):
-    duracao = y-x
-    print(f'O JOGO DUROU {duracao} HORA(S)')
-
-elif (x > y):
-    duracao = 24 - x + y
-    print(f'O JOGO DUROU {duracao} HORA(S)')
+elif final > inicial:
+    print(f'O JOGO DUROU {final - inicial} HORA(S)')
 
 else:
-    print('O JOGO DUROU 24 HORA(S)')
+    print(f'O JOGO DUROU {24 - inicial + final} HORA(S)')

@@ -1,12 +1,12 @@
-somaIdade = 0
+soma_idade = 0
 cont = 0
 
 while True:
-    num = int(input('idade: '))
+    num = int(input())
     if num < 0:
         break
-    somaIdade += num
-    cont += 1
-    media = somaIdade/cont
 
-print(f'a média das idades é {media:.2f}')
+    soma_idade += num
+    cont += 1
+
+print(f"{soma_idade/cont:.2f}")

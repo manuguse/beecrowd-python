@@ -1,21 +1,19 @@
-# exercício 1047
+hora_inicial, minuto_inicial, hora_final, minuto_final = map(int, input().split())
 
-hora1 = int(input('hora inicial '))
-min1 = int(input('minuto inicial '))
-hora2 = int(input('hora final '))
-min2 = int(input('minuto final '))
+inicio = hora_inicial * 60 + minuto_inicial
+fim = hora_final * 60 + minuto_final
 
-tempo1_min = hora1*60 + min1
-tempo2_min = hora2*60 + min2
+if inicio == fim:
+    print('O JOGO DUROU 24 HORA(S) E 0 MINUTO(S)')
 
-if (hora2 > hora1):
-    duracaoMin = tempo2_min - tempo1_min
-    horas = int(duracaoMin/60)
-    minutos = int(duracaoMin%60)
+elif inicio < fim:
+    duracao = fim - inicio
+    horas = int(duracao / 60)
+    minutos = duracao % 60
     print(f'O JOGO DUROU {horas} HORA(S) E {minutos} MINUTO(S)')
 
-elif (hora1 > hora2):
-    duracaoMin = 24*60 - tempo1_min + tempo2_min
-    horas = int(duracaoMin/60)
-    minutos = int(duracaoMin%60)
+elif inicio > fim:
+    duracao = (24 * 60 - inicio) + fim
+    horas = int(duracao / 60)
+    minutos = duracao % 60
     print(f'O JOGO DUROU {horas} HORA(S) E {minutos} MINUTO(S)')

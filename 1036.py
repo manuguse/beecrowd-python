@@ -1,15 +1,14 @@
-# exercício 1036
+A, B, C = map(float, input().split())
 
-a = float(input('insira a '))
-b = float(input('insira b '))
-c = float(input('insira c '))
+delta = (B**2 - 4*A*C)
 
-delta = (b**2 - 4*a*c)
+if (delta < 0) or (2*A == 0):
+  print('Impossivel calcular')
 
-if (delta < 0) or (2*a == 0) :
-  print('impossível calcular')
- else:
-   raiz1 = (-b + (delta)**1/2)/(2*a)
-   raiz2 = (-b - (delta)**1/2)/(2*a)
-   print(f'R1 = {raiz1}')
-   print(f'R2 = {raiz2}')
+else:
+
+  raiz1 = (-B + (delta)**(1/2))/(2*A)
+  raiz2 = (-B - (delta)**(1/2))/(2*A)
+
+  print(f'R1 = {raiz1:.5f}')
+  print(f'R2 = {raiz2:.5f}')

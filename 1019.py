@@ -1,10 +1,8 @@
-# exemplo 1019
+input_segs = int(input())
+horas = int(input_segs / 3600)
+mod_hora = input_segs % 3600
+minutos = int(mod_hora / 60)
+mod_minutos = mod_hora % 60
+segundos = mod_minutos
 
-inserirSegundos = int(input('segundos '))
-hora = int(inserirSegundos/3600)
-restoHora = int(inserirSegundos%3600)
-minuto = int(restoHora/60)
-restoMinuto = int(restoHora%60)
-segundo = restoMinuto
-
-print(f'{hora}:{minuto}:{segundo}')
+print(f'{horas}:{minutos}:{segundos}')

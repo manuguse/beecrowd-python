@@ -1,19 +1,13 @@
-# exercício 19 (1035)
+A, B, C, D = map(int, input().split())
 
-A = int(input('valor de A '))
-B = int(input('valor de B '))
-C = int(input('valor de C '))
-D = int(input('valor de D '))
+flag = False
 
-if (B < C):
-    print('valores não aceitos')
-elif (D < A):
-    print('valores não aceitos')
-elif ((C + D)<(A + B)):
-    print('valores não aceitos')
-elif (C < 0) or (D < 0):
-    print('valores não aceitos')
-elif (A%2 != 0):
-    print('valores não aceitos')
-else:
-    print('valores aceitos')
+if B > C:
+    if D > A:
+        if C + D > A + B:
+            if C > 0 and D > 0:
+                if A % 2 == 0:
+                    print('Valores aceitos')
+                    flag = True
+if not flag:
+    print('Valores nao aceitos')

@@ -4,7 +4,7 @@ pos = 0
 neg = 0
 
 for i in range (5):
-    num = int(input('numero '))
+    num = int(input())
     if (num%2 == 0):
         par += 1
     else:

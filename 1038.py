@@ -1,21 +1,5 @@
-# exercício 1038
+opcoes = {1: 4.0, 2: 4.5, 3: 5.0, 4: 2.0, 5: 1.5}
+codigo, quantidade = map(int, input().split())
 
-x = int(input('x '))
-while(x < 1) or (x > 5):
-    print('valor inválido')
-    x = int(input('x '))
-
-y = float(input('y '))
-
-if (x == 1):
-    valor = 4*y
-elif (x == 2):
-    valor = 4.5*y
-elif (x == 3):
-    valor = 5*y
-elif (x == 4):
-    valor = 2*y
-elif (x == 5):
-    valor = 1.5*y
-    
-print('total: R$ {:.2f}'.format(valor))
+valor = opcoes[codigo] * quantidade
+print(f"Total: R$ {valor:.2f}")

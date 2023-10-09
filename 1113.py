@@ -1,9 +1,8 @@
-x = int(input('X '))
-y = int(input('Y '))
-
-if x > y:
-    print('decrescente')
-elif y > x:
-    print('crescente')
-else:
-    print('igual')
+while True:
+    x, y = map(int, input().split())
+    if x == y:
+        break
+    if x > y:
+        print('Decrescente')
+    else:
+        print('Crescente')

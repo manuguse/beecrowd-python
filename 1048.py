@@ -1,24 +1,20 @@
-# exercício 1048
+aumentos = {
+    400: 1.15,
+    800: 1.12,
+    1200: 1.10,
+    2000: 1.07,
+    100000000000000: 1.04
+}
 
-salario = float(input('insira seu salário '))
+salario = float(input())
 
-if (salario <= 400):
-    novoSalario = salario*1.15
-    percentual = '15 %'
-elif (salario <= 800):
-    novoSalario = salario*1.12
-    percentual = '12 %'
-elif (salario <= 1200):
-    novoSalario = salario*1.10
-    percentual = '10 %'
-elif (salario <= 2000):
-    novoSalario = salario*1.07
-    percentual = '7 %'
-else:
-    novoSalario = salario*1.04
-    percentual = '4 %'
-    
-reajuste = novoSalario - salario
-print('Novo salário: R${:.2f}'.format(novoSalario))
-print('Reajuste ganho: R${:.2f}'.format(reajuste))
-print('Em percentual:', percentual)
+for aumento in aumentos:
+    if salario <= aumento:
+        novo_salario = salario * aumentos[aumento]
+        reajuste = novo_salario - salario
+        percentual = (aumentos[aumento] - 1) * 100
+        break
+
+print(f'Novo salario: {novo_salario:.2f}')
+print(f'Reajuste ganho: {reajuste:.2f}')
+print(f'Em percentual: {percentual:.0f} %')

@@ -1,12 +1,7 @@
-while True:
-    N = int(input())
-    if (0 <= N <= 13):
-        break
-f = 1
-const = N
+num = int(input())
+mult = 1
 
-while (const > 0):
-    f *= const
-    const -= 1
-    
-print(f)
+for i in range(1, num + 1):
+    mult *= i
+
+print(mult)

@@ -1,23 +1,17 @@
-# exercício 1134
-
-somaAlcool = 0
-somaGas = 0
-somaDiesel = 0
+tipos = [0, 0, 0]
 
 while True:
-    preferido = int(input('item preferido: '))
-    if (preferido < 1) or (preferido > 4):
-        print('valor inválido')
-    elif (preferido == 1):
-        somaAlcool += 1
-    elif (preferido == 2):
-        somaGas += 1
-    elif (preferido == 3):
-        somaDiesel += 1
-    elif (preferido == 4):
+
+    while True:
+        tipo = int(input())
+        if 1 <= tipo <= 4:
+            break
+    if tipo == 4:
         break
-    
+
+    tipos[tipo - 1] += 1
+
 print('MUITO OBRIGADO')
-print(f'Alcool = {somaAlcool}')
-print(f'Gasolina = {somaGas}')
-print(f'Diesel = {somaDiesel}')
+print(f'Alcool: {tipos[0]}')
+print(f'Gasolina: {tipos[1]}')
+print(f'Diesel: {tipos[2]}')

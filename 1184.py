@@ -1,35 +1,19 @@
-# exercicio adaptado
-
-import random
-
-ordem = int(input("ordem matriz "))
-opcao = input("deseja preencher pelo teclado ou de forma randomica? (T/R) ").upper()
-t = input("soma ou media (S/M) ").upper()
-
-# cria matriz 
 matriz = []
+for i in range(12):
+    matriz.append([0]*12)
 
-for i in range(ordem):
-    linhaN = []
-    if opcao == 'T':
-        linhaN = (input().split(" "))
-    else:
-        for j in range(ordem):
-            linhaN.append(random.randint(0,10))
-    matriz.append(linhaN)
+operacao = input()
+resultado = 0
 
-# opera matriz
-soma = 0
-contador = 0
+for i in range(12):
+    for j in range(12):
+        matriz[i][j] = float(input())
 
-for i in range(ordem):
-    for j in range(i):
-        soma += matriz[i][j]
-        contador += 1
+for linha in range(1, 12):
+    for coluna in range(linha):
+        resultado += matriz[linha][coluna]
 
-if t == "S":
-    print(soma)
-if t == "M":
-    print(soma/contador)
+if operacao == "M":
+    resultado /= 66
 
-print(matriz)
+print(f"{resultado:.1f}")
