@@ -19,3 +19,9 @@ if (P/C >= F):
     print('S')
 else:
     print('N')
+
+
+# código refeito em 26/12/23 para submissão:
+
+C, P, F = map(int, input().split())
+print('S' if (P/C >= F) else 'N')
